@@ -1,16 +1,41 @@
 ---
-const { class: className } = Astro.props
+const { class: className, laceBorder } = Astro.props
 ---
 
-<div class:list={["box", className]}>
-    <slot />
+<div class:list={{"lace-border": laceBorder}}>
+    <div class="outer-box">
+        <div class:list={["inner-box", className]}>
+            <slot />
+        </div>
+    </div>
 </div>
 
 <style>
-    .box {
+    .lace-border {
+        position: relative;
+    }
+
+    .lace-border::before {
+        content: "";
+        position: absolute;
+        inset: -22px;
+        
+        border: 22px solid transparent;
+        border-image-source: url("/border.svg");
+        border-image-slice: 32;
+        border-image-width: 64px;
+        border-image-repeat: repeat;
+        
+        image-rendering: pixelated;
+        pointer-events: none;
+    }
+
+    .outer-box {
+        padding: calc(var(--space-xs) * 0.5);
+        border: 2px dashed black;
+    }
+
+    .inner-box {
         padding: var(--space-md);
-        background-color: rgb(0, 0, 0);
-        border: 1px solid rgb(0, 0, 0);
-        border-radius: 2px;
     }
 </style>
