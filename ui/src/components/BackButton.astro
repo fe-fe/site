@@ -1,0 +1,28 @@
+---
+const { href } = Astro.props;
+---
+<a class="back-button" href={href}>
+    <i class="nf nf-oct-arrow_left"></i>
+    <span>back</span>
+</a>
+
+<style>
+    .back-button {
+        display: inline-flex; 
+        align-items: center;
+        gap: 0.4em;
+        background-color: black;
+        border: 2px solid black;
+        color: white;
+        padding: calc(var(--space-xs) * 0.75) var(--space-sm);
+        text-decoration: none;
+    }
+    .back-button:hover {
+        background-color: white;
+        color: black;
+    }
+    .back-button:focus-visible {
+        outline: 2px solid;
+        outline-offset: 2px;
+    }
+</style>
