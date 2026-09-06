@@ -1,22 +1,40 @@
+@import "https://www.nerdfonts.com/assets/css/webfont.css";
+@import "./inria-sans.css";
+
+
 :root {
     --space-xs: clamp(0.5rem, 1vw, 0.75rem);
     --space-sm: clamp(0.75rem, 2vw, 1rem);
     --space-md: clamp(1rem, 3vw, 1.5rem);
     --space-lg: clamp(1.5rem, 5vw, 3rem);
     --space-xl: clamp(2rem, 8vw, 6rem);
+
+    /* https://colornamer.robertcooper.me/ */
+    --natural-light-green: #EFEBCA;
+    --pinkham-orange: #EAC7AC;
+    --stolen-kiss-orange: #F0DBD2;
+    --rose-tonic-pink: #FFDDDD;
+    --hoarfrost-blue: #DCEDF9;
+    --mystic-green: #D8DCDB;
+    --sea-salt-sherbet-grey: #FFF7F7;
+    --frosty-morning-grey: #EFE6E8;
+
+    --font-xs: 14px;
+    --font-sm: 16px;
+    --font-md: 18px;
+    --font-lg: 20px;
+    --font-xl: 24px;
+    --font-2xl: 32px;
 }
 
 * {
     margin: 0;
     padding: 0;
-    font-family: "Ubuntu", sans-serif;
-    font-style: normal;
-    color: white;
-    font-size: large;
+    font-family: "Inria Sans", Impact;
 }
 
 body {
-    background-image: linear-gradient(to top, #bdc2e8 0%, #bdc2e8 1%, #e6dee9 100%);
+    background-color: var(--sea-salt-sherbet-grey);
     min-height: 100vh;
     overflow: hidden;
     display: flex;
@@ -71,6 +89,14 @@ body {
     gap: var(--space-md);
 }
 
+.gap-lg {
+    gap: var(--space-lg);
+}
+
+.gap-xl {
+    gap: var(--space-xl);
+}
+
 .w-100 {
     width: 100%;
 }
@@ -98,4 +124,28 @@ body {
 
 .justify-between {
     justify-content: space-between;
+}
+
+.align-bottom {
+    align-items: end;
+}
+
+.bg-nlg { background-color: var(--natural-light-green); }
+.bg-pho { background-color: var(--pinkham-orange); }
+.bg-sko { background-color: var(--stolen-kiss-orange); }
+.bg-rtp { background-color: var(--rose-tonic-pink); }
+.bg-hfb { background-color: var(--hoarfrost-blue); }
+.bg-myg { background-color: var(--mystic-green); }
+.bg-ssg { background-color: var(--sea-salt-sherbet-grey); }
+.bg-fmg { background-color: var(--frosty-morning-grey); }
+
+.font-xs { font-size: var(--font-xs); }
+.font-sm { font-size: var(--font-sm); }
+.font-md { font-size: var(--font-md); }
+.font-lg { font-size: var(--font-lg); }
+.font-xl { font-size: var(--font-xl); }
+.font-2xl { font-size: var(--font-2xl); }
+
+p {
+    text-align: justify;
 }
