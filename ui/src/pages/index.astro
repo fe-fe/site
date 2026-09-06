@@ -1,38 +1,22 @@
 ---
 import Layout from "../components/Layout.astro"
 import Box from "../components/Box.astro"
+import BackButton from "../components/BackButton.astro"
+import Navbar from "../components/Navbar.astro"
 
-const fawn = String.raw`
-⠀⠀⠀⠀⢀⠠⠤⠀⢀⣿⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠐⠀⠐⠀⠀⢀⣾⣿⡇⠀⠀⠀⠀⠀⢀⣼⡇⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⣸⣿⣿⣿⠀⠀⠀⠀⣴⣿⣿⠇⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⢠⣿⣿⣿⣇⠀⠀⢀⣾⣿⣿⣿⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⣴⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡟⠀⠀⠐⠀⡀
-⠀⠀⠀⠀⢰⡿⠉⠀⡜⣿⣿⣿⡿⠿⢿⣿⣿⡃⠀⠀⠂⠄⠀
-⠀⠀⠒⠒⠸⣿⣄⡘⣃⣿⣿⡟⢰⠃⠀⢹⣿⡇⠀⠀⠀⠀⠀
-⠀⠀⠚⠉⠀⠊⠻⣿⣿⣿⣿⣿⣮⣤⣤⣿⡟⠁⠘⠠⠁⠀⠀
-⠀⠀⠀⠀⠀⠠⠀⠀⠈⠙⠛⠛⠛⠛⠛⠁⠀⠒⠤⠀⠀⠀⠀
-⠨⠠⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠑⠀⠀⠀⠀⠀⠀
-⠁⠃⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-`
 ---
 
 <Layout title="index">
-	<Box class="w-fixed">
-		<div class="flex">
-			<span>mafer</span>
+	<div class="flex gap-lg align-bottom">
+		<div class="w-fixed">
+			<Box laceBorder={true} class="bg-myg">
+				<div class="flex font-lg">
+					<span>mafer</span>
+				</div>
+				<p class="font-md">
+					jamanta gordaja man ta gordaja manta gordajam anta gor daja manta gordaja manta gordaj ama nta gor dajama nta gordaj ama nta gorda
+				</p>
+			</Box>
 		</div>
-		<div class="flex w-100 justify-between">
-			<div class="p-sm">
-				<ul>
-					<li><a href="/">archive</a></li>
-					<li><a href="/">visitors</a></li>
-				</ul>
-			</div>
-			
-			<div class="ascii-art">
-				{fawn}
-			</div>
-		</div>
-	</Box>
+	</div>
 </Layout>

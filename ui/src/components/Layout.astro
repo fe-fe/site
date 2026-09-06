@@ -15,7 +15,8 @@ const { title } = Astro.props;
 		<title>{title}</title>
         <ClientRouter />
     </head>
-	<body class="">
+	<body>
+        <slot name="navbar" />
         <div id="content">
             <slot />
         </div>
@@ -24,11 +25,10 @@ const { title } = Astro.props;
 
 <style>
     #content {
-        flex: 1;
-        align-self: stretch;
         display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: var(--space-lg);
+        flex-direction: column;
+        align-items: center; 
+        justify-content: center; 
+        flex: 1;
     }
 </style>
