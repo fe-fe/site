@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import { getRecentlyPlayed } from "../services/lastfm-service";
-import Track from "./Track";
+import Track, { type TrackInfo } from "./Track";
+
 
 export default function RecentlyPlayedList() {
-    const [tracks, setTracks] = useState<any[]>([]);
+    const [tracks, setTracks] = useState<TrackInfo[]>([]);
 
     useEffect(() => {
         getRecentlyPlayed().then((data) => {
@@ -18,9 +19,9 @@ export default function RecentlyPlayedList() {
     return (
         <div>
             <div className="flex-column justify-center align-center">
-                {tracks.map((trackInfo) => (
+                {tracks.map((trackInfo, index) => (
                     <Track
-                        key={trackInfo.url}
+                        key={index}
                         trackInfo={trackInfo}
                     />
                 ))}

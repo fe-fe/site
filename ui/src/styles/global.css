@@ -127,6 +127,10 @@ body::-webkit-scrollbar {
     width: auto;
 }
 
+.nowrap {
+    white-space: nowrap;
+}
+
 .w-fixed {
     width: 100%;
     max-width: 20vw;
