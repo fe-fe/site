@@ -1,19 +1,29 @@
 ---
 import Layout from "../components/Layout.astro"
 import Box from "../components/Box.astro"
+import RecentlyPlayedBox from "../components/RecentlyPlayedBox.astro";
 ---
 
 <Layout title="index">
-	<div class="flex gap-lg align-bottom">
-		<div class="w-fixed">
-			<Box laceBorder={true} class="bg-myg">
-				<div class="flex font-lg">
-					<span>mafer</span>
-				</div>
-				<p class="font-md">
-					jamanta gordaja man ta gordaja manta gordajam anta gor daja manta gordaja manta gordaj ama nta gor dajama nta gordaj ama nta gorda
-				</p>
-			</Box>
-		</div>
-	</div>
+	<div id="bio-card">
+		<Box laceBorder={true} class="bg-myg w-fixed">
+			<div class="flex font-lg">
+				mafer
+			</div>
+			<p class="font-md">
+				jamanta gordaja man ta gordaja manta gordajam anta gor daja 
+				manta gordaja manta gordaj ama nta gor dajama nta gordaj ama nta gorda
+			</p>
+		</Box>
+	</div>		
+	<RecentlyPlayedBox />
 </Layout>
+
+<style>
+	#bio-card {
+		display: flex;
+		flex-direction: column;
+		height: 50vh;
+		justify-content: end;
+	}
+</style>
