@@ -2,9 +2,17 @@
 import Layout from "../components/Layout.astro"
 import Box from "../components/Box.astro"
 import RecentlyPlayedBox from "../components/RecentlyPlayedBox.astro";
+import Navbar from "../components/Navbar.astro";
 ---
 
 <Layout title="index">
+	<Navbar slot="navbar">
+		<div/> <div/>
+		<a id="source-link" href="https://github.com/fe-fe/site/">
+			source code
+		</a>
+	</Navbar>
+
 	<div id="bio-card">
 		<Box laceBorder={true} class="bg-myg w-fixed">
 			<div class="flex font-lg">
@@ -23,7 +31,13 @@ import RecentlyPlayedBox from "../components/RecentlyPlayedBox.astro";
 	#bio-card {
 		display: flex;
 		flex-direction: column;
-		height: 50vh;
+		height: 30vh;
 		justify-content: end;
 	}
+
+	#source-link {
+		text-decoration: none;
+		color: black;
+	}
+
 </style>
