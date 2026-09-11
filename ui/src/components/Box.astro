@@ -3,7 +3,7 @@ const { class: className, laceBorder } = Astro.props
 ---
 
 <div class:list={{"lace-border": laceBorder}}>
-    <div class="outer-box p-2">
+    <div class="outer-box p-1.5">
         <div class:list={["inner-box p-2", className]}>
             <slot />
         </div>
