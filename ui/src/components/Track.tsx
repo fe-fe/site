@@ -20,11 +20,10 @@ interface TrackProps {
 export default function Track({ trackInfo }: TrackProps) {
     return (
         <>
-            <a href={trackInfo.url} className="scrobble w-auto sm:w-sm whitespace-nowrap" target="_blank">
-                <div className="flex">
-                    <span className="inria-sans-bold">{trackInfo.artist["#text"]}</span>
-                    <pre> - </pre>
-                    <span>{trackInfo.name}</span>
+            <a href={trackInfo.url} className="scrobble w-auto sm:w-sm" target="_blank">
+                <div className="flex justify-between whitespace-nowrap">
+                    <div className="inria-sans-bold overflow-hidden text-ellipsis min-w-0 flex-1">{trackInfo.artist["#text"]}</div>
+                    <div className="overflow-hidden text-ellipsis min-w-0 flex-1 text-end">{trackInfo.name}</div>
                 </div>
             </a>
         </>
