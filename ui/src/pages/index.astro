@@ -13,31 +13,24 @@ import Navbar from "../components/Navbar.astro";
 		</a>
 	</Navbar>
 
-	<div id="bio-card">
-		<Box laceBorder={true} class="bg-myg w-fixed">
-			<div class="flex font-lg">
-				mafer
-			</div>
-			<p class="font-md">
-				jamanta gordaja man ta gordaja manta gordajam anta gor daja 
-				manta gordaja manta gordaj ama nta gor dajama nta gordaj ama nta gorda
-			</p>
-		</Box>
-	</div>		
-	<RecentlyPlayedBox />
+	<div class="grid grid-cols-1 gap-8 items-end justify-items-center py-15 px-10">
+		<div class="w-auto sm:w-xs">
+			<Box laceBorder={true} class="bg-myg">
+				<div class="flex font-md">mafer</div>
+				<p class="font-sm">
+					jamanta gordaja man ta gordaja manta gordajam anta gor daja 
+					manta gordaja manta gordaj ama nta gor dajama nta gordaj ama nta gorda
+				</p>
+			</Box>	
+		</div>
+		<RecentlyPlayedBox />
+	</div>
+	
 </Layout>
 
 <style>
-	#bio-card {
-		display: flex;
-		flex-direction: column;
-		height: 30vh;
-		justify-content: end;
-	}
-
 	#source-link {
 		text-decoration: none;
 		color: black;
 	}
-
 </style>
