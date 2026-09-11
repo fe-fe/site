@@ -18,7 +18,7 @@ export default function RecentlyPlayedList() {
 
     return (
         <div>
-            <div className="flex-column justify-center align-center">
+            <div className="flex-column justify-center items-center">
                 {tracks.map((trackInfo, index) => (
                     <Track
                         key={index}

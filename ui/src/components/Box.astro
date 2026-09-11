@@ -3,8 +3,8 @@ const { class: className, laceBorder } = Astro.props
 ---
 
 <div class:list={{"lace-border": laceBorder}}>
-    <div class="outer-box">
-        <div class:list={["inner-box", className]}>
+    <div class="outer-box p-2">
+        <div class:list={["inner-box p-2", className]}>
             <slot />
         </div>
     </div>
@@ -31,11 +31,9 @@ const { class: className, laceBorder } = Astro.props
     }
 
     .outer-box {
-        padding: calc(var(--space-xs) * 0.5);
         border: 2px dashed black;
     }
 
     .inner-box {
-        padding: var(--space-md);
     }
 </style>
